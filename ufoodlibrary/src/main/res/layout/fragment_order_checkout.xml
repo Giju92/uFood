@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/awayortable"
+        android:id="@+id/awayortablelabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/awayortableradiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp">
+        <RadioButton android:id="@+id/take_away"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/takeaway"
+            android:layout_marginBottom="15dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        <RadioButton android:id="@+id/eat_here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/table"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numberofpeople"
+        android:id="@+id/numberofpeoplelable"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="gone"
+       />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_margin="15dp"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:id="@+id/minusbutton"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/minus_circle"
+            android:background="@drawable/round_button"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/nofpeople"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:inputType="number"
+            android:maxLength="20"
+            android:text="1"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:background="@android:color/transparent"
+            android:visibility="gone"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/plusbutton"
+            android:layout_margin="6dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/round_button"
+            android:src="@drawable/plus_circle"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choosehours"
+        android:id="@+id/choosehourslabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <!-- <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner2"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp" /> -->
+
+    <com.wx.wheelview.widget.WheelView
+        android:id="@+id/wheelview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/buttoncheckout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/checkout"
+        android:background="@color/primary"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp">
+    </Button>
+
+
+</LinearLayout>

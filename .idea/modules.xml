@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/uFood.iml" filepath="$PROJECT_DIR$/uFood.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uFoodUser/uFoodUser.iml" filepath="$PROJECT_DIR$/uFoodUser/uFoodUser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ufoodfusion/ufoodfusion.iml" filepath="$PROJECT_DIR$/ufoodfusion/ufoodfusion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ufoodlibrary/ufoodlibrary.iml" filepath="$PROJECT_DIR$/ufoodlibrary/ufoodlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ufoodrestaurant/ufoodrestaurant.iml" filepath="$PROJECT_DIR$/ufoodrestaurant/ufoodrestaurant.iml" />
+    </modules>
+  </component>
+</project>

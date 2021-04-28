@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/firstRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/primary_text"
+                android:text="@string/name"/>
+            <EditText
+                android:id="@+id/editname"
+                android:hint="@string/edit_name_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/secondary_text"
+                android:layout_below="@+id/name"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/secondRelative"
+            android:layout_below="@+id/firstRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/textselecttype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/primary_text"
+                android:text="@string/select_type"/>
+
+            <RadioGroup
+                android:layout_below="@+id/textselecttype"
+                android:id="@+id/selecttype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radiofood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/food"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:id="@+id/radiodrink"
+                    android:text="@string/drink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/thirdRelative"
+            android:layout_below="@+id/secondRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/primary_text"
+                android:text="@string/price"/>
+            <EditText
+                android:id="@+id/priceedit"
+                android:hint="@string/price_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/secondary_text"
+                android:layout_below="@+id/price"
+                android:singleLine="true"
+                android:inputType="numberDecimal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/third2Relative"
+            android:layout_below="@+id/thirdRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <CheckBox
+                android:id="@+id/availablecheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/available"
+                android:checked="true" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fourRelative"
+            android:layout_below="@+id/third2Relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/primary_text"
+                android:text="@string/ingredients"/>
+            <EditText
+                android:id="@+id/ingredientsedit"
+                android:hint="@string/ingredient_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/secondary_text"
+                android:layout_below="@+id/ingredients"
+                android:singleLine="false"
+                android:inputType="text"
+                android:maxLength="200"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fiveRelative"
+            android:layout_below="@+id/fourRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <CheckBox
+                android:id="@+id/glutenfreecheck"
+                android:text="@string/gluten_free"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/vegetariancheck"
+                android:layout_below="@+id/glutenfreecheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vegetarian"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/vegancheck"
+                android:layout_below="@+id/vegetariancheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vegan"
+                android:checked="false" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sixRelative"
+            android:layout_below="@+id/fiveRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <CheckBox
+                android:id="@+id/salecheck"
+                android:text="@string/sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false" />
+
+            <EditText
+                android:id="@+id/saleedit"
+                android:hint="@string/sale_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/secondary_text"
+                android:singleLine="true"
+                android:inputType="number"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@+id/salecheck"
+                android:layout_toEndOf="@+id/salecheck" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sevenRelative"
+            android:layout_below="@+id/sixRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:layout_centerInParent="true">
+
+                <ImageButton
+                    android:id="@+id/addimbutt"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary"
+                    android:src="@drawable/ic_check_white_24dp"/>
+
+                <ImageButton
+                    android:id="@+id/cancimbutt"
+                    android:layout_toRightOf="@+id/addimbutt"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary"
+                    android:src="@drawable/ic_cancel_white_24dp"/>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

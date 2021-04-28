@@ -1,0 +1,4 @@
+<resources>
+    <string name="title_activity_g3_statistics_menu">G3StatisticsMenu</string>
+    <string name="title_activity_g3_statistic_form">G3StatisticForm</string>
+</resources>

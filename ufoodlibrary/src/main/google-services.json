@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "520068840818",
+    "firebase_url": "https://project-1780749557739696720.firebaseio.com",
+    "project_id": "project-1780749557739696720",
+    "storage_bucket": "project-1780749557739696720.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520068840818:android:45565ce6d569ed7b",
+        "android_client_info": {
+          "package_name": "com.polito.group3.mobileproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "520068840818-2jpufm0487dtfaug7brgi4emklt57rfp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.polito.group3.mobileproject",
+            "certificate_hash": "C5F7C7D6090C533104FEF80386C5226B3973D1E3"
+          }
+        },
+        {
+          "client_id": "520068840818-t6fg19robu4hsfl0s3qgog6jgb2hlagq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoZd1EY0JFNDkl2RzAq9QGQUoQUPwVZxk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "520068840818-t6fg19robu4hsfl0s3qgog6jgb2hlagq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

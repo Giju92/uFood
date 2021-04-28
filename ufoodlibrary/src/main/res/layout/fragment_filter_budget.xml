@@ -1,0 +1,112 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical">
+
+        <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="6dp"
+            android:textColor="@color/primary_text"
+            android:text="@string/budgett"/>
+            -->
+        <LinearLayout
+            android:id="@+id/euro1layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="6dp"
+            android:paddingLeft="6dp"
+            android:orientation="horizontal">
+            <com.example.ufoodlibrary.utilities.CircleAnimatedCheckBox
+                android:id="@+id/cb1euro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:button="@drawable/checkbox_selector_light"
+                android:tag="@string/vegetarian"
+                android:scaleX="0.50"
+                android:scaleY="0.50"
+                android:focusable="false"
+                app:cb_color="#ff0004"
+                app:cb_pressed_ring_width="2dp"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="€"
+               />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/euro2layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="6dp"
+            android:paddingLeft="6dp"
+            android:orientation="horizontal">
+            <com.example.ufoodlibrary.utilities.CircleAnimatedCheckBox
+                android:id="@+id/cb2euro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:button="@drawable/checkbox_selector_light"
+                android:tag="@string/vegetarian"
+                android:scaleX="0.50"
+                android:scaleY="0.50"
+                android:focusable="false"
+                app:cb_color="#ff0004"
+                app:cb_pressed_ring_width="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="€€"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/euro3layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="6dp"
+            android:paddingLeft="6dp"
+            android:orientation="horizontal">
+            <com.example.ufoodlibrary.utilities.CircleAnimatedCheckBox
+                android:id="@+id/cb3euro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:button="@drawable/checkbox_selector_light"
+                android:scaleX="0.50"
+                android:scaleY="0.50"
+                android:focusable="false"
+                app:cb_color="#ff0004"
+                app:cb_pressed_ring_width="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="€€€"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

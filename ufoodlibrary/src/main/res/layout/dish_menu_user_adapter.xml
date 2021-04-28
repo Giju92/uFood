@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/firstlayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/dishnamelayout"
+            android:layout_weight="0.3"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:id="@+id/dishnametext"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pomodori, mozzarella e origano"
+                android:id="@+id/dishingredientstext"
+                android:textStyle="italic"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/vegetarian"
+                    android:id="@+id/veg_icon"
+                    android:layout_margin="5dp"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/gluten_free"
+                    android:id="@+id/glutenfreeicon"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/veg_icon"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/dishpricelayout">
+
+            <TextView
+                android:id="@+id/dishofferttext"
+                android:background="@drawable/discount"
+                android:gravity="center"
+                android:text="53%"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_width="50dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="€"
+                    android:singleLine="true"
+                    android:id="@+id/dishpricetext"
+                    android:layout_weight="0"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_marginLeft="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="€"
+                    android:singleLine="true"
+                    android:layout_weight="0"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/dishdiscountedpricetext"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/purchasebutton"
+            android:layout_marginLeft="10dp"
+            android:elevation="10dp"
+            android:background="@drawable/add_circle"
+            android:layout_gravity="center_vertical" />
+
+</LinearLayout>

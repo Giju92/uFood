@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <include layout="@layout/toolbar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView2"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/profile_user" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/name_credential"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/hint_email"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/password_credential"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/hint_password"
+            android:textStyle="normal"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/log_in"
+            android:id="@+id/login_button"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/red"
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/new_useraccount"
+            android:id="@+id/new_useraccount_button"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:enabled="true"
+            android:focusable="true" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/new_rest_account"
+            android:id="@+id/new_restaccount_button"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:enabled="true"
+            android:focusable="true" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:id="@+id/forgot_password_button"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/primary"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:enabled="true"
+            android:textAllCaps="false"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

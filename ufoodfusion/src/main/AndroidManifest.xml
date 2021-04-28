@@ -1,0 +1,152 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.polito.group3.ufoodfusion">
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="com.example.ufoodlibrary.utilities.G3Application"
+        android:icon="@mipmap/ic_new_logo"
+        android:label="@string/app_fusion_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBwRgVSeRBsqdZMBMq3tT-UsrSFTqopeNg" />
+
+        <receiver android:name="com.example.ufoodlibrary.broadcastreceivers.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".services.G3BootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".services.G3NotifyService" />
+
+        <activity
+            android:name=".activities.G3SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <service
+            android:name=".services.G3UserNotifyService">
+
+        </service>
+
+        <activity
+            android:name=".activities.G3BaseActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activities.G3BasketActivity"
+            android:parentActivityName=".activities.G3UserRestaurantActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.G3AboutActivity"
+            android:parentActivityName=".activities.G3UserSearchRestaurant"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.G3UserCreateProfile"
+            android:parentActivityName=".activities.G3UserSearchRestaurant"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.G3ShowEditProfile"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.G3UserSearchRestaurant"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".activities.G3UserRestaurantActivity"
+            android:parentActivityName=".activities.G3UserSearchRestaurant"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.G3FavouritesActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.G3UserOrdersActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.G3UserRateOrderActivity"
+            android:parentActivityName=".activities.G3UserOrdersActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.G3LoginActivity"
+            android:parentActivityName=".activities.G3UserSearchRestaurant"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activities.G3TabsActivity"
+            android:parentActivityName=".activities.G3TabsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activities.G3CreateRestaurant"
+            android:parentActivityName=".activities.G3LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".activities.G3MenuRestourantActivity">
+            android:screenOrientation="portrait"
+        </activity>
+
+        <activity
+            android:name=".activities.G3EditRestaurantProfileActivity"
+            android:parentActivityName=".activities.G3TabsActivity">
+            android:screenOrientation="portrait"
+        </activity>
+
+        <activity
+            android:name=".activities.G3RestaurantProfileActivity"
+            android:parentActivityName=".activities.G3TabsActivity">
+            android:screenOrientation="portrait"
+        </activity>
+
+        <activity
+            android:name=".activities.G3ReviewsActivity"
+            android:parentActivityName=".activities.G3TabsActivity">
+            android:screenOrientation="portrait"
+        </activity>
+
+        <activity
+            android:name=".activities.G3StatisticsMenu"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activities.G3StatisticForm"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <service
+            android:name="com.example.ufoodlibrary.utilities.GeocodeAddressIntentService"
+            android:exported="false" />
+
+        <activity android:name=".activities.G3MapSearchActivity"
+            android:screenOrientation="portrait"></activity>
+
+    </application>
+
+</manifest>

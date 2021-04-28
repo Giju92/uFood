@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/usernametext"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/reviewdatetext"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <RatingBar
+            android:id="@+id/reviewratingbar"
+            style="@style/foodRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:layout_marginLeft="41dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/usernametext"
+            android:layout_toEndOf="@+id/usernametext"
+            android:layout_marginStart="41dp"
+            android:stepSize="0.1"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/food_quality"
+            android:id="@+id/foodaratinglabel" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodratingBar"
+            android:isIndicator="true"
+            android:numStars="5"
+            style="@style/foodRatingBar"
+            android:layout_alignParentTop="false"
+            android:layout_toRightOf="@+id/foodaratinglabel"
+            android:layout_toEndOf="@+id/foodaratinglabel"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/punctuality"
+            android:id="@+id/punctualityratinglabel"
+            android:layout_below="@+id/foodaratinglabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/punctualityratingBar"
+            android:isIndicator="true"
+            android:numStars="5"
+            style="@style/foodRatingBar"
+            android:layout_alignTop="@+id/punctualityratinglabel"
+            android:layout_alignLeft="@+id/foodratingBar"
+            android:layout_alignStart="@+id/foodratingBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/service_label"
+            android:id="@+id/serviceratinglabel"
+            android:layout_below="@+id/punctualityratinglabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/serviceratingBar"
+            android:isIndicator="true"
+            android:numStars="5"
+            style="@style/foodRatingBar"
+            android:layout_alignTop="@+id/serviceratinglabel"
+            android:layout_alignLeft="@+id/punctualityratingBar"
+            android:layout_alignStart="@+id/punctualityratingBar" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/reviewtext"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@string/reply_button"
+        android:id="@+id/reply_button"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/replytext"
+        android:background="@color/pallid_yellow"
+        android:text="Reply Text"
+        android:textStyle="italic"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/replyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:visibility="gone"
+            android:text="@string/cancel"/>
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:visibility="gone"
+            android:text="@string/save"/>
+
+    </LinearLayout>
+
+</LinearLayout>

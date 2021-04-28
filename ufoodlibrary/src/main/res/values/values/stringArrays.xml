@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="filters">
+        <item>@string/cuisines</item>
+        <item>@string/budget</item>
+        <item>@string/payment</item>
+    </string-array>
+</resources>

@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/primary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            >
+
+            <ImageView
+                android:id="@+id/restpic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/default_restaurant"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/scrim_top"
+                app:layout_collapseMode="pin"/>
+
+            <include layout="@layout/collapse_toolbar"></include>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:id="@+id/infoscrollview"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/divider"
+            android:showDividers="middle"
+            android:dividerPadding="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:layout_margin="10dp"
+                android:textColor="@color/red"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:id="@+id/restnameandtypetext" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addresslabel"
+                    android:id="@+id/addresslabel"
+
+                    android:layout_gravity="left"
+                    android:drawableLeft="@drawable/ic_maps_place"
+                    android:drawablePadding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/addresstext"
+                    android:layout_alignParentTop="true"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phonelabel"
+                    android:id="@+id/phonelabel"
+
+                    android:layout_gravity="left"
+                    android:drawableLeft="@drawable/small_phone"
+                    android:drawablePadding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/mobilephonetext"
+                    android:layout_alignParentTop="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/phonetext"
+                    android:layout_alignParentTop="true"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:id="@+id/sitelinearlayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Website"
+                    android:id="@+id/websitelabel"
+
+                    android:layout_gravity="left"
+                    android:drawableLeft="@drawable/small_computer"
+                    android:drawablePadding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/websitetext"
+                    android:layout_alignParentTop="true"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:id="@+id/tablebookinglinearlayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seats"
+                    android:id="@+id/seatslabel"
+                    android:drawableLeft="@drawable/number_seats_red"
+                    android:layout_gravity="left"
+                    android:drawablePadding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/seatstext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:id="@+id/servicetimelinearlayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/servicetime"
+                    android:drawableLeft="@drawable/timer_red"
+                    android:id="@+id/servicetimelabel"
+                    android:layout_gravity="left"
+                    android:drawablePadding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/holo_red_dark"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/servicetimetext" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/openinghours"
+                    android:id="@+id/openinghourslabel"
+
+                    android:layout_gravity="left"
+                    android:drawableLeft="@drawable/small_time"
+                    android:drawablePadding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" "
+                            android:id="@+id/textView2"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="LU"
+                            android:id="@+id/mondaylabel"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MA"
+                            android:id="@+id/tuesdaylabel"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ME"
+                            android:id="@+id/wednesdaylabel"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GI"
+                            android:id="@+id/thursdaylabel"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VE"
+                            android:id="@+id/fridaylabel"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SA"
+                            android:id="@+id/saturdaylabel"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DO"
+                            android:id="@+id/sundaylabel"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <View
+                            android:id="@+id/dividerrow1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_weight="1"
+                            android:background="#FF909090"
+                            android:padding="2dip" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Apertura"
+                            android:id="@+id/openlunchlabel"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/openmonlunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/opentuelunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/openwedlunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/openthulunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/openfrilunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/opensatlunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/opensunlunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <View
+                            android:id="@+id/dividerrow2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_weight="1"
+                            android:background="#FF909090"
+                            android:padding="2dip" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chiusura"
+                            android:id="@+id/closelunchlabel"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closemonlunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closetuelunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closewedlunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closethulunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closefrilunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closesatlunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closesunlunchtext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <View
+                            android:id="@+id/dividerrow3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_weight="1"
+                            android:background="#FF909090"
+                            android:padding="2dip" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Apertura"
+                            android:id="@+id/opendinnerlabel"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/openmondinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/opentuedinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/openweddinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/openthudinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/openfridinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/opensatdinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/opensundinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <View
+                            android:id="@+id/dividerrow4"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_weight="1"
+                            android:background="#FF909090"
+                            android:padding="2dip" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chiusura"
+                            android:id="@+id/closedinnerlabel"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closemondinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closetuedinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closeweddinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closethudinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closefridinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closesatdinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/light_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/closesundinnertext"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:id="@+id/priceratinglinearlayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pricecategory"
+                    android:id="@+id/priceratinglabel"
+                    android:drawableLeft="@drawable/price_red"
+                    android:layout_gravity="left"
+                    android:drawablePadding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/holo_red_dark"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/priceratingtext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_margin="10dp"
+                android:id="@+id/paymentlinearlayout">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paymentmethods"
+                    android:id="@+id/paymentmethodslabel"
+                    android:layout_gravity="left"
+                    android:drawableLeft="@drawable/small_payment"
+                    android:drawablePadding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/money"
+                    android:id="@+id/moneylabel"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/credit_card"
+                    android:id="@+id/creditcardlabel"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bancomat"
+                    android:id="@+id/bancomatlabel"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ticket: "
+                        android:id="@+id/ticketlabel"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="supported tickets"
+                        android:id="@+id/supportedticketstext"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ticketlabel"
+                        android:layout_toEndOf="@+id/ticketlabel"
+                        />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Email"
+                    android:id="@+id/emaillabel"
+
+                    android:layout_gravity="left"
+                    android:drawableLeft="@drawable/small_email"
+                    android:drawablePadding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/emailtext"
+                    android:layout_alignParentTop="true"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
